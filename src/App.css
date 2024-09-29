@@ -171,4 +171,25 @@ body {
       width: 100%; /* Full width on small screens */
     }
   }
+
+  .notification {
+    color: #28a745; /* Green color for success message */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.purchase-button {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.purchase-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
   

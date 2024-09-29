@@ -6,6 +6,7 @@ export default function List() {
   const [cart, setCart] = useState({});
   const [discountCode, setDiscountCode] = useState('');
   const [discountApplied, setDiscountApplied] = useState(false);
+  const [notification, setNotification] = useState('');
 
   function addToCart(product) {
     setCart(prevCart => {
@@ -41,6 +42,18 @@ export default function List() {
     }
   };
 
+  const handlePurchase = () => {
+    if (Object.keys(cart).length === 0) {
+      alert('Your cart is empty!');
+      return;
+    }
+
+    setNotification('Thank you for your purchase!'); // Set notification
+    setCart({}); // Clear cart after purchase
+    setDiscountApplied(false); // Reset discount status
+    setDiscountCode(''); // Clear discount code
+  };
+
   return (
     <article>
       <div className="cart-icon">
@@ -68,12 +81,18 @@ export default function List() {
       <div className="discount-code">
         <input 
           type="text" 
-          placeholder="Enter MJU for 10 % Discount" 
+          placeholder="Enter MJU for 10% Discount" 
           value={discountCode}
           onChange={(e) => setDiscountCode(e.target.value)}
         />
         <button onClick={handleApplyDiscount}>Apply</button>
       </div>
+
+      {/* Purchase Button */}
+      <button onClick={handlePurchase} className="purchase-button">Purchase</button>
+      
+      {/* Notification */}
+      {notification && <p className="notification">{notification}</p>}
       
       <ul className="product-list">
         {products.map(product => (
