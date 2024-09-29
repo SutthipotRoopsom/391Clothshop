@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap');
+
+
+/* Global Styles */
+body {
+    font-family: 'Fredoka', sans-serif; /* Use Fredoka font */
+    background-color: #ff7e5f; 
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+  
+  
+  /* Article Styles */
+  article {
+    position: relative;
+    max-width: 1200px; /* Set a reasonable max width */
+    margin: 20px auto;
+    padding: 30px; /* Increase padding for more space inside */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header Styles */
+    h1 {
+    color: #af4c4c; /* Green headers */
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center align the header */
+    margin: 20px 0; /* Space above and below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+    letter-spacing: 1px; /* Increase spacing between letters */
+}
+  
+  /* Header Styles */
+ h2 {
+    color: #4CAF50; /* Green headers */
+  }
+  
+  /* List Styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Product List Container */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if there are too many */
+    justify-content: space-between; /* Space items evenly */
+    margin: 20px 0; /* Add some margin for spacing */
+  }
+  
+  /* Individual Product Item */
+  .product-item {
+    margin: 10px; /* Space between items */
+    text-align: center; /* Center-align text */
+    background-color: #ffffff; /* White background for product items */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside items */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+    width: calc(33% - 20px); /* Width of each item, three items per row */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  .product-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  }
+  
+  /* Product Image */
+  .product-item img {
+    width: 80px; /* Smaller width for product images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below images */
+  }
+  
+  /* Button Styles */
+  button {
+    font-family: 'Fredoka', sans-serif; /* Ensure buttons use Fredoka font */
+    padding: 10px 15px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+  
+  button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Cart Styles */
+  .cart {
+    background-color: #fff; /* White background for the cart */
+    padding: 15px; /* Padding inside the cart */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  }
+  
+  .cart p {
+    margin: 5px 0;
+  }
+  
+  /* Cart Icon Styles */
+  .cart-icon {
+    float: right;
+    font-size: 24px;
+    color: #000; /* Change to black */
+  }
+  
+  .cart-count {
+    margin-left: 5px;
+    padding: 2px 6px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  /* Total Price Styles */
+  .cart h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #28a745;
+  }
+  
+  /* Cancel Button Styles */
+  .cancel-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between text and button */
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  /* Discount Code Styles */
+  .discount-code {
+    margin: 20px 0;
+  }
+  
+  .discount-code input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 120px); /* Responsive width */
+  }
+  
+  .discount-code button {
+    margin-left: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .product-item {
+      width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-item {
+      width: 100%; /* Full width on small screens */
+    }
+  }
+  
